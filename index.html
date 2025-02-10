@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equalizer com Better Now</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="player-container">
+        <div class="info-container">
+            <img src="assets/img/post-malone.png" alt="Better Now" width="30%">
+            <h1>Better Now</h1>
+            <p>Post Malone</p>
+            <div class="audio-controls">
+                <button id="playPauseButton"><i class="ri-play-fill"></i></button>
+                <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="1">
+            </div>
+        </div>
+
+        <audio id="audio" controls>
+            <source src="assets/BetterNow.mp3" type="audio/mp3">
+            Seu navegador não suporta o formato de áudio MP3.
+        </audio>
+    </div>
+
+    <script src="./src/style.js"></script>
+    <script src="./src/app.js"></script>
+</body>
+</html>
