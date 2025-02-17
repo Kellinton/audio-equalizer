@@ -14,16 +14,17 @@ const dataArray = new Uint8Array(bufferLength);
 
 function createEqualizer() {
     const equalizer = document.createElement('div');
+    const body = document.querySelector('body');
     equalizer.classList.add('equalizer');
     
-    for (let i = 0; i < 18; i++) {
+    for (let i = 0; i < 19; i++) {
         const bar = document.createElement('div');
         bar.classList.add('bar');
         bar.id = `bar${i + 1}`; 
         equalizer.appendChild(bar);
     }
 
-    playerContainer.insertBefore(equalizer, audio); 
+    body.insertBefore(equalizer, playerContainer);
 }
 
 
@@ -34,7 +35,7 @@ function updateEqualizer() {
 
     for (let i = 0; i < bars.length; i++) {
         const value = dataArray[i * 2] * 2;  
-        const scale = (value / 250) * 1;  
+        const scale = (value / 128) * 1;  
 
         bars[i].style.transform = `scaleY(${Math.min(4, Math.max(0.1, scale))})`; 
 

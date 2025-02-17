@@ -30,6 +30,7 @@ style.innerHTML = `
     }
 
     .player-container {
+        position: absolute;
         display: flex;
         flex-direction: column;
         align-items: center;
